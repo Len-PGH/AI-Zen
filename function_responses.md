@@ -5,7 +5,7 @@
 verify_customer
 -----------------
 
-verify_customer shows the contents of the record of the customer once the account_number and cpni are verified.
+`verify_customer` shows the contents of the record of the customer once the `account_number` and `cpni` are verified.
 
 ```json
 
@@ -50,7 +50,7 @@ Received:
 modem_diagnostics
 -------------------
 
-modem_diagnostics uses the `meta_data` from the `verified_customer` function to populate the response with `"modem_downstream_level": 55` , `"modem_upstream_level": 0` and `"modem_snr": 35`
+`modem_diagnostics` uses the `meta_data` from the `verified_customer` function to populate the response with `"modem_downstream_level": 55` , `"modem_upstream_level": 0` and `"modem_snr": 35`
 
 ```json
 
@@ -61,7 +61,7 @@ Received:
 swap_modem
 ------------
 
-modem_swap shows what the `"mac_address": "0012345678ff",` was before the swap and after the database was updated with the new `"mac_address": "0012345678BB"`
+`modem_swap` shows what the `"mac_address": "0012345678ff",` was before the swap and after the database was updated with the new `"mac_address": "0012345678BB"`
 
 ```json
 Received:
