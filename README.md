@@ -78,7 +78,7 @@ Check modem levels with modem_diagnostics function and give the results.
 
 Check modem SNR with modem_diagnostics function and give the results.
 
-$$ Step 5
+## Step 5
 
 Ask the customer if there is anything else you can help them with.
 
