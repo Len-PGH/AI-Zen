@@ -230,8 +230,6 @@ if ($customer->{modem_speed_upload} && $customer->{modem_speed_download}) {
     $res->body( $swml->swaig_response_json( { response => "Invalid try again speed_test" } ) );
 }
 
-
-
 return $res->finalize;
 ```
 
