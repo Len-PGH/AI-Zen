@@ -224,9 +224,6 @@ my $res       = Plack::Response->new( 200 );
 my $agent     = $req->param( 'agent_id' );
 my $customer  = $post_data->{meta_data}->{customer};
 
-print STDERR Dumper $data;
-print STDERR $agent;
-
 if ($customer->{modem_speed_upload} && $customer->{modem_speed_download}) {
     $res->body( $swml->swaig_response_json( { response => "Tell the user here are the test results. Download speed: $customer->{modem_speed_download}, Upload speed: $customer->{modem_speed_upload}" } ) );
 } else {
