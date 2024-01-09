@@ -109,11 +109,6 @@ my $data      = $post_data->{argument}->{parsed}->[0];
 my $res       = Plack::Response->new( 200 );
 my $agent     = $req->param( 'agent_id' );
 
-print STDERR Dumper $data;
-print STDERR $agent;
-
-broadcast_by_agent_id( $agent, $data );
-
 my $dbh = DBI->connect(
   "dbi:Pg:dbname=$database;host=$host;port=$port",
   $dbusername,
@@ -128,17 +123,12 @@ $sth->execute() or die "Couldn't execute statement: $DBI::errstr";
 
 my $agents = $sth->fetchrow_hashref;
 
-broadcast_by_agent_id( $agent, $agents );
 
 if ($data->{account_number} eq $agents->{account_number} && $data->{cpni} eq $agents->{cpni}) {
     $res->body( $swml->swaig_response_json( { response => "Account verified, proceed", action => [  { set_meta_data => { customer => $agents } } ] } ) );
-    broadcast_by_agent_id( $agent, "valid" );
-    broadcast_by_agent_id( $agent,  $swml->swaig_response_json( { response => "Account verified, proceed", action => [  { set_meta_data => { customer => $agents } } ] } ) );
 } else {
     # This is the failure
     $res->body( $swml->swaig_response_json( { response => "Account invalid try again" } ) ) ;
-    broadcast_by_agent_id( $agent, "invalid" );
-    broadcast_by_agent_id( $agent, $swml->swaig_response_json( { response => "Account invalid try again" } ) );
 }
 
 return $res->finalize;
@@ -166,9 +156,6 @@ my $res       = Plack::Response->new( 200 );
 my $agent     = $req->param( 'agent_id' );
 my $customer  = $post_data->{meta_data}->{customer};
 
-broadcast_by_agent_id( $agent, $data );
-broadcast_by_agent_id( $agent, $customer );
-
 sub is_valid_mac_address {
     my ($mac) = @_;
 
@@ -177,8 +164,6 @@ sub is_valid_mac_address {
 
     return $mac =~ $mac_regex;
 }
-
-# Example
 
 my $dbh = DBI->connect(
   "dbi:Pg:dbname=$database;host=$host;port=$port",
@@ -237,38 +222,15 @@ my $post_data = decode_json( $req->raw_body );
 my $data      = $post_data->{argument}->{parsed}->[0];
 my $res       = Plack::Response->new( 200 );
 my $agent     = $req->param( 'agent_id' );
-#Use this as a seconday function once primary function is used from the database
 my $customer  = $post_data->{meta_data}->{customer};
 
 print STDERR Dumper $data;
 print STDERR $agent;
 
-broadcast_by_agent_id( $agent, $customer );
-
-#my $dbh = DBI->connect(
-#  "dbi:Pg:dbname=$database;host=$host;port=$port",
-#  $dbusername,
-#  $dbpassword,
-#  { AutoCommit => 1, RaiseError => 1 } ) or die "Couldn't execute statement: $DBI::errstr\n";
-
-# Update the SQL query to include new conditions
-#my $sql = "SELECT * FROM customers WHERE modem_speed_upload = ? AND modem_speed_download = ? LIMIT 1";
-
-#my $sth = $dbh->prepare( $sql );
-#$sth->bind_param(1, $data->{modem_speed_upload});
-#$sth->bind_param(2, $data->{modem_speed_download});
-#$sth->execute() or die "Couldn't execute statement: $DBI::errstr";
-
-#my $agents = $sth->fetchrow_hashref;
-
 if ($customer->{modem_speed_upload} && $customer->{modem_speed_download}) {
     $res->body( $swml->swaig_response_json( { response => "Tell the user here are the test results. Download speed: $customer->{modem_speed_download}, Upload speed: $customer->{modem_speed_upload}" } ) );
-    broadcast_by_agent_id( $agent, "valid, please continue" );
-    broadcast_by_agent_id( $agent, $swml->swaig_response_json( { response => "Tell the user here are the test results. Download speed: $customer->{modem_speed_download} megabits, Upload speed: $customer->{modem_speed_upload} megabits" } ) );
 } else {
     $res->body( $swml->swaig_response_json( { response => "Invalid try again speed_test" } ) );
-    broadcast_by_agent_id( $agent, "invalid, use speed_test function" );
-    broadcast_by_agent_id( $agent, $swml->swaig_response_json( { response => "Invalid try again speed_test" } ) );
 }
 
 
@@ -292,20 +254,12 @@ my $post_data = decode_json( $req->raw_body );
 my $data      = $post_data->{argument}->{parsed}->[0];
 my $res       = Plack::Response->new( 200 );
 my $agent     = $req->param( 'agent_id' );
-#Use this as a seconday function once primary function is used from the database
 my $customer  = $post_data->{meta_data}->{customer};
-
-print STDERR Dumper $data;
-print STDERR $agent;
-
-broadcast_by_agent_id( $agent, $customer );
 
 if ($customer) {
     $res->body( $swml->swaig_response_json( { response => "Tell the user here are the test results. Downstream level: $customer->{modem_downstream_level}, Upstream level: $customer->{modem_upstream_level}, Modem SNR: $customer->{modem_snr}" } ) );
-    broadcast_by_agent_id( $agent, $swml->swaig_response_json( { response => "Tell the user here are the test results. Downstream level: $customer->{modem_downstream_level}, Upstream level: $customer->{modem_upstream_level}, Modem SNR: $customer->{modem_snr}" } ) );
 } else {
     $res->body( $swml->swaig_response_json( { response => "Invalid try again. Use modem-diagnostics-function" } ) );
-    broadcast_by_agent_id( $agent, $swml->swaig_response_json( { response => "Invalid try again. modem-diagnostics-function" } ) );
 }
 
 return $res->finalize;
