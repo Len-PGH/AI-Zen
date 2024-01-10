@@ -136,7 +136,7 @@ return $res->finalize;
 
 ## Meta_Data Functions
 
-Meta_Data Functions access the output of an already executed function. In this example once the function verify_customer is executed by the user by verifing account_number and cpni then the record for that customer is accessable via json for any meta_data_functions.
+Meta_Data Functions access the output of an already executed function. In this example once the function `verify_custome` is executed by the user by verifing `account_numbe`r and cpni then the record for that customer is accessable via json for any meta_data functions.
 
 modem_swap
 -----------------------
