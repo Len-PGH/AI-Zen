@@ -14,26 +14,6 @@ Received:
   "account_number": "8005000",
   "cpni": "4455"
 }
-Received:
-{
-  "modem_downstream_uncorrectables": 534,
-  "phone_number": "5551235555",
-  "cpni": 4455,
-  "mac_address": "0012345678ff",
-  "modem_speed_download": 955,
-  "first_name": "Ada",
-  "service_address": "123 some st pittsburgh pa 15215",
-  "active": 1,
-  "modem_speed_upload": 75,
-  "billing_address": "123 some st pittsburgh pa 15215",
-  "id": 1,
-  "email_address": "ada.lovelace@livewirecalbe.com",
-  "modem_upstream_level": 0,
-  "modem_downstream_level": 55,
-  "account_number": 8005000,
-  "modem_snr": 35,
-  "last_name": "Lovelace"
-}
 ```
 
 speed_test
@@ -68,46 +48,7 @@ Received:
 {
   "mac_address": "0012345678BB"
 }
-Received:
-{
-  "modem_downstream_level": 55,
-  "modem_snr": 35,
-  "account_number": 8005000,
-  "last_name": "Lovelace",
-  "active": 1,
-  "service_address": "123 some st pittsburgh pa 15215",
-  "modem_speed_upload": 75,
-  "id": 1,
-  "billing_address": "123 some st pittsburgh pa 15215",
-  "email_address": "ada.lovelace@livewirecalbe.com",
-  "modem_upstream_level": 0,
-  "cpni": 4455,
-  "modem_speed_download": 955,
-  "first_name": "Ada",
-  "mac_address": "0012345678ff",
-  "modem_downstream_uncorrectables": 534,
-  "phone_number": "5551235555"
-}
-Received:
-{
-  "modem_downstream_uncorrectables": 534,
-  "phone_number": "5551235555",
-  "modem_speed_download": 955,
-  "mac_address": "0012345678BB",
-  "first_name": "Ada",
-  "cpni": 4455,
-  "service_address": "123 some st pittsburgh pa 15215",
-  "active": 1,
-  "modem_upstream_level": 0,
-  "email_address": "ada.lovelace@livewirecalbe.com",
-  "billing_address": "123 some st pittsburgh pa 15215",
-  "modem_speed_upload": 75,
-  "id": 1,
-  "modem_downstream_level": 55,
-  "last_name": "Lovelace",
-  "account_number": 8005000,
-  "modem_snr": 35
-}
+
 
 ```
 
