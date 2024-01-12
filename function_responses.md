@@ -16,6 +16,13 @@ Args:
 }
 ```
 
+```json
+
+Received:
+"{\n   \"response\" : \"Account verified, proceed\",\n   \"action\" : [\n      {\n         \"set_meta_data\" : {\n            \"customer\" : {\n               \"email_address\" : \"ada.lovelace@livewirecalbe.com\",\n               \"modem_snr\" : 35,\n               \"active\" : 1,\n               \"first_name\" : \"Ada\",\n               \"modem_upstream_level\" : 0,\n               \"cpni\" : 4455,\n               \"modem_downstream_level\" : 55,\n               \"service_address\" : \"123 some st pittsburgh pa 15215\",\n               \"mac_address\" : \"0024688924aa\",\n               \"modem_speed_upload\" : 75,\n               \"modem_downstream_uncorrectables\" : 534,\n               \"phone_number\" : \"5551235555\",\n               \"last_name\" : \"Lovelace\",\n               \"modem_speed_download\" : 955,\n               \"billing_address\" : \"123 some st pittsburgh pa 15215\",\n               \"account_number\" : 8005000,\n               \"id\" : 1\n            }\n         }\n      }\n   ]\n}\n"
+```
+
+
 speed_test
 -----------------
 
@@ -48,7 +55,11 @@ Args:
 {
   "mac_address": "0012345678BB"
 }
+```
 
+```json
+Received:
+"{\n   \"response\" : \"Customers modem mac address updated, please plug in your modem and allow 1 minute for all systems to update your new modem\"\n}\n"
 
 ```
 
