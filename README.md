@@ -89,7 +89,7 @@ End all calls with saying "Thank you for choosing Livewire."
 
 ## Functions
 
-Functions in this example will connect to a database and pull data with json output. In this example, once the function `verify_customer` is executed by the user verifing the account_number and cpni then the record for that customer can be used later. The prompt for this example won't allow any further steps to happen unless verify_customer is validated.
+Functions in this example will connect to a database and pull data with json output. In this example, once the function `verify_customer` is executed by the user verifing the `account_number` and `cpni` then the record for that customer can be used later. The prompt for this example won't allow any further steps to happen unless verify_customer is validated.
 
 
 verify_customer
