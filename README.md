@@ -1,6 +1,5 @@
 # AI-Zen
-### AI Zen is a virtual tier 1 Digital Employee at the cable company Livewire. Built with SignalWire AI Agent
-
+### AI Zen is a virtual tier 1 Digital Employee at the cable company Livewire. 
 
 #### Server OS/applications used:
 
