@@ -1,5 +1,5 @@
 # AI-Zen
-### AI Zen is a virtual tier 1 support agent at the cable company Livewire.
+### AI Zen is a virtual tier 1 support agent at the cable company Livewire. Built with SignalWire AI Agent
 
 
 #### Server OS/applications used:
