@@ -19,7 +19,34 @@ Args:
 ```json
 
 Received:
-"{\n   \"response\" : \"Account verified, proceed\",\n   \"action\" : [\n      {\n         \"set_meta_data\" : {\n            \"customer\" : {\n               \"email_address\" : \"ada.lovelace@livewirecalbe.com\",\n               \"modem_snr\" : 35,\n               \"active\" : 1,\n               \"first_name\" : \"Ada\",\n               \"modem_upstream_level\" : 0,\n               \"cpni\" : 4455,\n               \"modem_downstream_level\" : 55,\n               \"service_address\" : \"123 some st pittsburgh pa 15215\",\n               \"mac_address\" : \"0024688924aa\",\n               \"modem_speed_upload\" : 75,\n               \"modem_downstream_uncorrectables\" : 534,\n               \"phone_number\" : \"5551235555\",\n               \"last_name\" : \"Lovelace\",\n               \"modem_speed_download\" : 955,\n               \"billing_address\" : \"123 some st pittsburgh pa 15215\",\n               \"account_number\" : 8005000,\n               \"id\" : 1\n            }\n         }\n      }\n   ]\n}\n"
+{
+   "response" : "Account verified, proceed",
+   "action" : [
+      {
+         "set_meta_data" : {
+            "customer" : {
+               "email_address" : "ada.lovelace@livewirecalbe.com",
+               "modem_snr" : 35,
+               "active" : 1,
+               "first_name" : "Ada",
+               "modem_upstream_level" : 0,
+               "cpni" : 4455,
+               "modem_downstream_level" : 55,
+               "service_address" : "123 some st pittsburgh pa 15215",
+               "mac_address" : "0024688924aa",
+               "modem_speed_upload" : 75,
+               "modem_downstream_uncorrectables" : 534,
+               "phone_number" : "5551235555",
+               "last_name" : "Lovelace",
+               "modem_speed_download" : 955,
+               "billing_address" : "123 some st pittsburgh pa 15215",
+               "account_number" : 8005000,
+               "id" : 1
+            }
+         }
+      }
+   ]
+}
 ```
 
 
@@ -31,7 +58,9 @@ speed_test
 ```json
 
 Received:
-"{\n   \"response\" : \"Tell the user here are the test results. Download speed: 955 megabits, Upload speed: 75 megabits\"\n}\n"
+{
+   "response" : "Tell the user here are the test results. Download speed: 955 megabits, Upload speed: 75 megabits"
+}
 ```
 
 modem_diagnostics
@@ -42,7 +71,9 @@ modem_diagnostics
 ```json
 
 Received:
-"{\n   \"response\" : \"Tell the user here are the test results. Downstream level: 55, Upstream level: 0, Modem SNR: 35\"\n}\n"
+{
+   "response" : "Tell the user here are the test results. Downstream level: 55, Upstream level: 0, Modem SNR: 35"
+}
 ```
 
 swap_modem
@@ -59,7 +90,9 @@ Args:
 
 ```json
 Received:
-"{\n   \"response\" : \"Customers modem mac address updated, please plug in your modem and allow 1 minute for all systems to update your new modem\"\n}\n"
+{
+   "response" : "Customers modem mac address updated, please plug in your modem and allow 1 minute for all systems to update your new modem"
+}
 
 ```
 
