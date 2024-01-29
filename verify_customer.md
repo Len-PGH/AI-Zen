@@ -2,8 +2,8 @@ verify_customer
 -----------------------
 
 * Name:`verify_customer`
-* Purpose:Verify customer account number, cpni first, last name and phone number
-* Argument:account_number|7 digit number,cpni|4 digit number
+* Purpose:`Verify customer account number, cpni first, last name and phone number`
+* Argument:`account_number|7 digit number,cpni|4 digit number`
 
 ```perl
 
