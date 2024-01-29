@@ -2,8 +2,8 @@ modem_swap
 -----------------------
 
 * Name:`modem_swap`
-* Purpose:Swap the users modem
-* Argument:mac_address|new modem MAC Address in lowercase hex 12 characters
+* Purpose:`Swap the users modem`
+* Argument:`mac_address|new modem MAC Address in lowercase hex 12 characters`
 
 ```perl
 
