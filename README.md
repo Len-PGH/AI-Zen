@@ -95,8 +95,8 @@ verify_customer
 -----------------------
 
 * Name:`verify_customer`
-* Purpose:Verify customer account number, cpni first, last name and phone number
-* Argument:account_number|7 digit number,cpni|4 digit number
+* Purpose:`Verify customer account number, cpni first, last name and phone number`
+* Argument:`account_number|7 digit number,cpni|4 digit number`
 
 ```perl
 
@@ -135,14 +135,14 @@ return $res->finalize;
 
 ## Meta_Data Functions
 
-Meta_Data Functions access the output of an already executed function. In this example once the function `verify_custome` is executed by the user by verifing `account_number` and cpni then the record for that customer is accessable via json for any meta_data functions.
+Meta_Data Functions access the output of an already executed function. In this example once the function `verify_customer` is executed by the user by verifing `account_number` and cpni then the record for that customer is accessable via json for any meta_data functions.
 
 modem_swap
 -----------------------
 
 * Name:`modem_swap`
-* Purpose:Swap the users modem
-* Argument:mac_address|new modem MAC Address in lowercase hex 12 characters
+* Purpose:`Swap the users modem`
+* Argument:`mac_address|new modem MAC Address in lowercase hex 12 characters`
 
 ```perl
 
@@ -209,8 +209,8 @@ speed_test
 -----------------------
 
 * Name:`speed_test`
-* Purpose:Test upload and download speed from the modem
-* Argument:account_number|7 digit number,cpni|4 digit number
+* Purpose:`Test upload and download speed from the modem`
+* Argument:`account_number|7 digit number,cpni|4 digit number`
 
 ```perl
 
@@ -235,9 +235,9 @@ return $res->finalize;
 modem_diagnostics
 -----------------------
 
-* Name:modem_diagnostics
-* Purpose:customer modem upstream downstream and snr levels
-* Argument:account_number|7 digit number,cpni|4 digit number
+* Name:`modem_diagnostics`
+* Purpose:`customer modem upstream downstream and snr levels`
+* Argument:`account_number|7 digit number,cpni|4 digit number`
 
 ```bash
 
