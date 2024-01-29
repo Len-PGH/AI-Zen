@@ -2,8 +2,8 @@ speed_test
 -----------------------
 
 * Name:`speed_test`
-* Purpose:Test upload and download speed from the modem
-* Argument:account_number|7 digit number,cpni|4 digit number
+* Purpose:`Test upload and download speed from the modem`
+* Argument:`account_number|7 digit number,cpni|4 digit number`
 
 ```perl
 
